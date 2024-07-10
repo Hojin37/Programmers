@@ -5,15 +5,19 @@ SELECT
     R.REPLY_ID,
     R.WRITER_ID,
     R.CONTENTS,
-    DATE_FORMAT(R.CREATED_DATE, "%Y-%m-%d") AS CREATED_DATE
+    TO_CHAR(R.CREATED_DATE, 'YYYY-MM-DD') AS CREATED_DATE
 FROM
-    USED_GOODS_BOARD B
-    JOIN
-        USED_GOODS_REPLY R
-        ON B.BOARD_ID = R.BOARD_ID
+    used_goods_board B,
+    used_goods_reply R
 WHERE
-    B.CREATED_DATE
-    LIKE "2022-10%"
+    B.BOARD_ID = R.BOARD_ID
+    AND
+    TO_CHAR(B.created_date, 'YYYY-MM') = '2022-10'
 ORDER BY
-    R.CREATED_DATE ASC,
-    B.TITLE ASC;
+    R.created_date asc,
+    B.title asc
+;
+    
+    
+    
+    
