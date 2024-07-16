@@ -11,8 +11,7 @@ FROM
     used_goods_reply R
 WHERE
     B.board_id = R.board_id
-    AND
-    TO_CHAR(B.created_date, 'YYYY-MM') = '2022-10'
+    AND TO_CHAR(B.created_date, 'YYYY-MM') = '2022-10'
 ORDER BY
     R.created_date ASC,
     B.title ASC
@@ -28,12 +27,10 @@ SELECT
     DATE_FORMAT(R.CREATED_DATE, "%Y-%m-%d") AS CREATED_DATE
 FROM
     USED_GOODS_BOARD B
-    JOIN
-        USED_GOODS_REPLY R
+    JOIN USED_GOODS_REPLY R
         ON B.BOARD_ID = R.BOARD_ID
 WHERE
-    B.CREATED_DATE
-    LIKE "2022-10%"
+    B.CREATED_DATE LIKE "2022-10%"
 ORDER BY
     R.CREATED_DATE ASC,
     B.TITLE ASC
