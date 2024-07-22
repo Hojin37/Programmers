@@ -1,2 +1,11 @@
--- 코드를 입력하세요
-SELECT ANIMAL_ID, NAME FROM ANIMAL_INS WHERE INTAKE_CONDITION NOT LIKE "%Aged%";
+-- Oracle
+SELECT
+    animal_id,
+    name
+FROM
+    animal_ins
+WHERE
+    intake_condition != 'Aged'
+ORDER BY
+    animal_id
+;
