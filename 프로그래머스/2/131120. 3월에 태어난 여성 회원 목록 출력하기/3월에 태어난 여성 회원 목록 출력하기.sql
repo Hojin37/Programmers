@@ -1,17 +1,15 @@
 -- Oracle
 SELECT
-    MEMBER_ID,
-    MEMBER_NAME,
-    GENDER,
-    TO_CHAR(date_of_birth, 'YYYY-MM-DD') AS DATE_OF_BIRTH
+    member_id,
+    member_name,
+    gender,
+    TO_CHAR(date_of_birth, 'YYYY-MM-DD') AS date_of_birth
 FROM
     member_profile
 WHERE
-    tlno IS NOT NULL
-    AND
-    TO_CHAR(date_of_birth, 'MM') = '03'
-    AND 
     gender = 'W'
+    AND TO_CHAR(date_of_birth, 'MM') = '03'
+    AND tlno IS NOT NULL
 ORDER BY
     member_id ASC
 ;
@@ -26,9 +24,7 @@ FROM
     MEMBER_PROFILE
 WHERE 
     GENDER LIKE 'W'
-    AND 
-    DATE_OF_BIRTH LIKE "%-03-%"
-    AND 
-    TLNO IS NOT NULL
+    AND DATE_OF_BIRTH LIKE "%-03-%"
+    AND TLNO IS NOT NULL
 ORDER BY 
     MEMBER_ID ASC;
