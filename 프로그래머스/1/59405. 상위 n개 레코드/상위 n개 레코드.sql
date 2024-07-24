@@ -1,5 +1,10 @@
--- 코드를 입력하세요
-SELECT NAME
-FROM ANIMAL_INS 
-ORDER BY DATETIME 
-LIMIT 1;
+-- Oracle
+SELECT
+    name
+FROM
+    (SELECT *
+     FROM animal_ins
+     ORDER BY datetime ASC)
+WHERE 
+    ROWNUM < 2
+;
