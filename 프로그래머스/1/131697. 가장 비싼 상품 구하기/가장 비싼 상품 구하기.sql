@@ -4,3 +4,10 @@ SELECT
 FROM
     product
 ;
+
+-- MySQL
+SELECT
+    MAX(PRICE) AS MAX_PRICE
+FROM
+    PRODUCT
+;
