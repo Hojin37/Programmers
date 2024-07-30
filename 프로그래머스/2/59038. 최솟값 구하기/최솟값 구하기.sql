@@ -1,5 +1,10 @@
--- 코드를 입(력하세요
-SELECT DATETIME 
-FROM ANIMAL_INS 
-ORDER BY DATETIME
-LIMIT 1;
+-- Oracle
+SELECT
+    datetime AS 시간
+FROM
+    (SELECT *
+     FROM animal_ins
+     ORDER BY datetime ASC)
+WHERE
+    ROWNUM = 1
+;
