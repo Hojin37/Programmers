@@ -1,17 +1,10 @@
 -- Oracle
 SELECT
-	animal_id
+    animal_id
 FROM
-	animal_ins
+    animal_ins
 WHERE
-	name IS NOT NULL
-;
-
--- MySQL
-SELECT 
-	ANIMAL_ID 
-FROM 
-	ANIMAL_INS 
-WHERE 
-	NAME IS NOT NULL
+    name IS NOT NULL
+ORDER BY
+    animal_id ASC
 ;
