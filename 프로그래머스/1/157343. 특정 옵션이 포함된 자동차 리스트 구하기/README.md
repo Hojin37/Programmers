@@ -1,6 +1,6 @@
 # [level 1] 특정 옵션이 포함된 자동차 리스트 구하기 - 157343 
 
-[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/157343) 
+[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/157343?language=oracle) 
 
 ### 성능 요약
 
@@ -16,7 +16,7 @@ Empty
 
 ### 제출 일자
 
-2024년 06월 07일 23:24:35
+2024년 09월 02일 21:44:11
 
 ### 문제 설명
 
