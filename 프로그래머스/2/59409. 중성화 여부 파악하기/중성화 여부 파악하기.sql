@@ -12,3 +12,14 @@ from
 order by
     animal_id asc
 ;
+
+-- MySQL
+SELECT 
+    ANIMAL_ID, 
+    NAME, 
+    IF(SEX_UPON_INTAKE LIKE "%Neutered%" OR SEX_UPON_INTAKE LIKE "Spayed%", "O", "X") AS 중성화
+FROM 
+    ANIMAL_INS
+ORDER BY 
+    ANIMAL_ID ASC
+;
