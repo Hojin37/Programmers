@@ -1,15 +1,17 @@
+import java.util.ArrayList;
+
 class Solution {
-    public int[] solution(int start, int end_num) {
-        // 배열의 길이를 구할 int arrLength 선언 및 초기화
-        int arrLength = start - end_num + 1;
-        // 정답 선언 및 초기화 - 길이는 start-end_num
-        int[] answer = new int[arrLength];
-        // 카운트 다운을 할 for문
-        for(int i=0; i<arrLength; i++){
-            answer[i] = start--;
+    public int[] solution(int start_num, int end_num) {
+        ArrayList<Integer> list = new ArrayList<>();
+        int n = start_num;
+        
+        for(int i=end_num; i<=start_num; i++){
+            list.add(n);
+            n--;
         }
         
-        // 정답 리턴
+        int[] answer = list.stream().mapToInt(i->i).toArray();
+        
         return answer;
     }
 }
