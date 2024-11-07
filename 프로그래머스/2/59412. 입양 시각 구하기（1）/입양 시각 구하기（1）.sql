@@ -11,3 +11,17 @@ group by
 order by
     to_number(to_char(datetime, 'hh24'))
 ;
+
+-- MySQL
+SELECT 
+    DATE_FORMAT(DATETIME, "%H") AS HOUR, 
+    COUNT(*) AS COUNT
+FROM 
+    ANIMAL_OUTS
+WHERE 
+    DATE_FORMAT(DATETIME, "%H") BETWEEN 09 AND 19
+GROUP BY 
+    DATE_FORMAT(DATETIME, "%H")
+ORDER BY 
+    DATE_FORMAT(DATETIME, "%H")
+;
