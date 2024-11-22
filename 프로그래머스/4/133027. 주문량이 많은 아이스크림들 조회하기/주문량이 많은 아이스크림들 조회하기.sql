@@ -1,10 +1,13 @@
 -- Oracle
-sELECT FLAVOR
-FROM (
-    SELECT FLAVOR
-    FROM FIRST_HALF
-    JOIN JULY USING(FLAVOR)
-    GROUP BY FLAVOR
-    ORDER BY SUM(FIRST_HALF.TOTAL_ORDER) + SUM(JULY.TOTAL_ORDER) DESC
- )
-WHERE ROWNUM <= 3;
+select 
+    flavor
+from 
+    (select flavor
+    from first_half
+    join july using(flavor)
+    group by flavor
+    order by sum(first_half.total_order) + sum(july.total_order) desc
+    )
+where 
+    rownum <= 3
+;
