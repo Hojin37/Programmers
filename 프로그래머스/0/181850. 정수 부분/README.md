@@ -1,6 +1,6 @@
 # [level 0] 정수 부분 - 181850 
 
-[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/181850?language=python3) 
+[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/181850) 
 
 ### 성능 요약
 
@@ -16,7 +16,7 @@
 
 ### 제출 일자
 
-2024년 12월 11일 22:32:15
+2024년 12월 11일 22:47:51
 
 ### 문제 설명
 
